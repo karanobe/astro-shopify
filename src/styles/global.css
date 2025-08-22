@@ -59,6 +59,10 @@
     @apply flex-1;
   }
 
+  a {
+    @apply cursor-pointer;
+  }
+
   details > summary {
     list-style: none;
   }

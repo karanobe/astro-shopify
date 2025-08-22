@@ -9,7 +9,7 @@ import ProductImageGallery from "../../components/ProductImageGallery.astro";
 import ProductBreadcrumb from "../../components/ProductBreadcrumb.astro";
 import ProductInformations from "../../components/ProductInformations.astro";
 import ProductRecommendations from "../../components/ProductRecommendations.astro";
-import ProductReviews from "../../components/ProductReviews.astro";
+// import ProductReviews from "../../components/ProductReviews.astro";
 import ProductAccordions from "../../components/ProductAccordions.astro";
 
 const { handle } = Astro.params;
@@ -44,6 +44,7 @@ setCache.short(Astro);
             <ProductInformations
               title={product.title}
               price={firstVariant?.price}
+              description={product.description}
             />
 
             <div>
@@ -62,9 +63,9 @@ setCache.short(Astro);
         </div>
       </section>
 
-      <section class="container">
+      {/* <section class="container">
         <ProductReviews />
-      </section>
+      </section> */}
 
       <section class="container">
         <ProductRecommendations productId={product.id} buyerIP={ip} />

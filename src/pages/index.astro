@@ -1,10 +1,11 @@
 ---
 import { getProducts } from "./../utils/shopify";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroBanner from '../components/Hero.astro';
 import Products from "../components/Products.astro";
 import { setCache } from "../utils/cache";
 
-const title = "Astro + Shopify";
+const title = "My Shopify Store";
 const headers = Astro.request.headers;
 const ip = headers.get("x-vercel-forwarded-for") || Astro.clientAddress;
 const products = await getProducts({ buyerIP: ip });
@@ -13,5 +14,12 @@ setCache.short(Astro);
 ---
 
 <BaseLayout title={title}>
+    <HeroBanner
+      title="Discover Our New Collection"
+      subtitle="Handcrafted products designed for modern living."
+      ctaText="Shop Now"
+      ctaLink="/products"
+      backgroundImage="/hero-background.jpg"
+    />  
   <Products products={products} />
 </BaseLayout>

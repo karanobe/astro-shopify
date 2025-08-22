@@ -6,8 +6,9 @@ import Money from "./Money.svelte";
 export interface Props {
   price?: z.infer<typeof MoneyV2Result>;
   title: string;
+  description: string | null;
 }
-const { price, title } = Astro.props as Props;
+const { price, title, description } = Astro.props as Props;
 ---
 
 <h1 class="text-2xl font-bold text-zinc-800 sm:text-4xl">
@@ -76,15 +77,11 @@ const { price, title } = Astro.props as Props;
       >42 Reviews</a
     >
   </div>
-  <div class="mt-6">
-    <p class="text-base text-zinc-900">
-      This store is for demo purposes only. No orders will be fulfilled. Please
-      visit the brand's <a
-        class="text-emerald-900 underline"
-        href="https://www.lateafternoons.ca"
-        target="_blank"
-        rel="noopener noreferer">website</a
-      > to purchase this product.
-    </p>
-  </div>
+  {description && (
+    <div class="mt-6">
+      <p class="text-base text-zinc-900">
+        {description}
+      </p>
+    </div>
+  )}
 </div>
