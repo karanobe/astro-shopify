@@ -12,15 +12,15 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/svelte": "^7.1.0",
-    "@astrojs/vercel": "^8.2.5",
+    "@astrojs/svelte": "^7.1.1",
+    "@astrojs/vercel": "^8.2.7",
     "@nanostores/persistent": "^1.1.0",
     "@shopify/hydrogen-react": "^2025.5.0",
-    "@tailwindcss/vite": "^4.1.11",
-    "astro": "^5.12.9",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.7",
     "nanostores": "^1.0.1",
-    "svelte": "^5.38.0",
-    "zod": "^4.0.17"
+    "svelte": "^5.38.10",
+    "zod": "^4.1.8"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
